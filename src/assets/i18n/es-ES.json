@@ -1,0 +1,21 @@
+{
+    "App": {
+        "headerTitle": "Basic Marvel Application",
+        "submit": "Submit",
+        "clean": "Clean",
+        "back": "Back",
+        "edit": "Edit",
+        "save": "Save",
+        "filter": {
+            "filter": "Filter Hero",
+            "search": "Search by Name",
+            "id": "Search by ID"
+        },
+        "details": {
+            "heroDetail": "Hero detail",
+            "heroName": "Hero name",
+            "heroId": "Hero ID",
+            "heroGender": "Hero Gender"
+        }
+    }
+}

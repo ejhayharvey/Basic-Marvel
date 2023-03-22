@@ -1,0 +1,36 @@
+<div class="filter-wrapper" [formGroup]="filterForm">
+    <h4>{{ "App.filter.filter" | translate }}</h4>
+    <div class="filter-wrapper__filter">
+        <div class="filter-wrapper__filter__search-name">
+          <mat-label>{{ "App.filter.search" | translate }}</mat-label>
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                autocomplete="off"
+                formControlName="searchName"
+                placeholder="Seach by Name"
+                (keyup)="searchNameChanges()"
+              />
+            </mat-form-field>
+        </div>
+        <div class="filter-wrapper__filter__search-id">
+          <mat-label>{{ "App.filter.id" | translate }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              type="number"
+              autocomplete="off"
+              formControlName="searchId"
+              placeholder="Seach by ID"
+              (keyup)="searchIdChanges()"
+            />
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="filter-wrapper__buttons">
+            <button type="submit" class="filter-wrapper__buttons__cleanBtn" (click)="clean()">{{ "App.clean" | translate }}</button>
+            <button type="submit" class="filter-wrapper__buttons__filterBtn" (click)="search()">
+              {{ "App.submit" | translate }}
+            </button>
+      </div>
+</div>

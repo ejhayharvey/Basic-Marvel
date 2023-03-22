@@ -1,0 +1,57 @@
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    h4 {
+        margin: 0 0 20px 0;
+    }
+
+    mat-label {
+        font-size: 12px;
+    }
+
+    &__filter {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+
+        &__search-name, &__search-id {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-self: flex-end;
+
+        &__cleanBtn, &__filterBtn {
+            width: 95px;
+            height: 36px;
+            align-self: self-end;
+            background: var(--primary-color);
+            color: white;
+            font-family: Roboto;
+            font-size: 16px;
+            border: none;
+            border-radius: 0.375rem;
+        }
+
+        &__cleanBtn:hover {
+            opacity: 0.5;
+          }
+
+          &__filterBtn {
+            margin-left: 15px;
+          }
+
+          &__filterBtn:hover {
+            opacity: 0.5;
+          }
+    
+    }
+}

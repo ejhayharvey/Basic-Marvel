@@ -1,0 +1,64 @@
+<div class="main-wrapper">
+    <app-header></app-header>
+    <mat-card class="details-form">
+        <div class="details-form__details-content">
+            <div class="details-form__details-content__header">
+                <h2>{{ "App.details.heroDetail" | translate }}</h2>
+            </div>
+
+            <div class="details-form__details-content__form">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{
+                      "App.details.heroId" | translate
+                    }}</mat-label>
+                    <input
+                      matInput
+                      formControlName="heroId"
+                      type="number"
+                      value="{{ heroId }}"
+                    />
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>{{
+                      "App.details.heroName" | translate
+                    }}</mat-label>
+                    <input
+                      matInput
+                      formControlName="heroName"
+                      type="text"
+                      value="{{ heroName }}"
+                    />
+                  </mat-form-field>
+        
+                  <mat-form-field appearance="outline">
+                    <mat-label>{{ "App.details.heroGender" | translate }}</mat-label>
+                    <input
+                      matInput
+                      formControlName="heroGender"
+                      type="text"
+                      value="{{ heroGender }}"
+                    />
+                  </mat-form-field>
+            </div>
+        </div>
+    </mat-card>
+    <div class="details-buttons">
+        <button
+            type="submit"
+            class="details-buttons__btn-back"
+            (click)="goBack()"
+        >
+            {{ "App.back" | translate }}
+        </button>
+
+      <div class="details-buttons__right-buttons">
+        <button type="submit" class="details-buttons__right-buttons__btn-edit">
+          {{ "App.edit" | translate }}
+        </button>
+
+        <button type="submit" class="details-buttons__right-buttons__btn-submit">
+          {{ "App.save" | translate }}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div style="width: 100%">
+    <app-header></app-header>
+    <app-filter-component  
+      (filterName)="filterByName($event)"
+      (filterId)="filterById($event)"
+      (filterData)="filter()"
+    ></app-filter-component>
+    <div class="data-wrapper mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef> Number </th>
+              <td mat-cell *matCellDef="let data"> {{data.number}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="hero">
+              <th mat-header-cell *matHeaderCellDef> Hero </th>
+              <td mat-cell *matCellDef="let data"> {{data.hero}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let data"> {{data.id}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="gender">
+              <th mat-header-cell *matHeaderCellDef> Gender </th>
+              <td mat-cell *matCellDef="let data"> {{data.gender}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let data">
+                    <mat-icon (click)="onDetail(data)">remove_red_eye</mat-icon>
+                    <mat-icon (click)="onDelete(data)">delete_outline</mat-icon>
+                </td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</div>
