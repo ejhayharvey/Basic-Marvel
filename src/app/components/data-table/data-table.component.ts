@@ -29,7 +29,6 @@ export class DataTableComponent implements OnInit {
   }
 
   onDetail(selectedHero: MarvelHero) {
-    console.log(selectedHero, 'index');
     let item = selectedHero;
     this.router.navigate([`details/${item.id}`]);
   }
